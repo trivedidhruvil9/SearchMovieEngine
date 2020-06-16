@@ -1,0 +1,32 @@
+<%- include("partials/header") %>
+
+<h1 id="rhead">Searched Results</h1>
+
+<table id="rtable">
+            
+            <% data["Search"].forEach(function(movie) { %>
+            <tr class="rimg">
+                <td>
+                    <img src="<%= movie["Poster"]%>" alt="not found">
+                </td>
+            </tr>
+
+            <tr class="rdata"> 
+                <td>
+                    <%= movie["Title"]%> - <strong><%= movie["Year"]%></strong>
+                <hr style="margin-bottom: 50px;">
+                </td>
+                
+            </tr>
+           
+       
+           <% })%>
+    
+    
+</table>
+
+
+
+<a id="link" href="/">Search Again?</a>
+
+<%- include("partials/footer") %>
