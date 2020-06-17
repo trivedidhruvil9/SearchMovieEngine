@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-
+var PORT  = 3000 || process.env.PORT;
 app.use(express.static("public"));
 
 var request = require('request');
@@ -23,6 +23,6 @@ app.get("/results", function(req, res){
 });
 
 
-app.listen(3000, function() { 
+app.listen(PORT, function() { 
     console.log('Movie App has Started!!'); 
   });
